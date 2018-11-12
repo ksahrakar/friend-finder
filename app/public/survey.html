@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>cmp@bl</title>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+  
+  <!-- Chosen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+  <style>h5{background-color:rgb(122, 140, 196)} </style>
+
+</head>
+
+<body style="font-family: 'Khand', sans-serif">
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 style="float:right"><i></i>cmp@bl...</h1>
+        </div>
+        <hr style="display:block;border-color:brown;border-width:2px"> 
+        <h2><strong>Find out who's most like YOU!</strong></h2>
+        <br>
+        <br>
+        <h3><strong>This is How We Identify You</strong></h3>
+        <h4>E-mail address (required)</h4>
+        <input type="text" id="name" class="form-control" required>
+        <h4>Profile Pic (required)</h4>
+        <input type="text" id="photo" class="form-control" required>
+        <br>
+        <br>
+        <hr style="display:block;border-color:brown;border-width:2px"> 
+        <h3>Survey Questions</h3>
+        <br>
+        
+        <h5>When I'm in a crowd, I like to stand out</h5>
+        <select class="chosen-select" id="q1">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h4><strong>----------</strong></h4>
+        <h5>I am responsible for my position, situation, and emotions</h5>
+        <select class="chosen-select" id="q2">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h4><strong>----------</strong></h4>
+        <h5>Being outdoors revitalizes me</h5>
+        <select class="chosen-select" id="q3">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h4><strong>----------</strong></h4>
+        <h5>I will suffer to get to a desired goal</h5>
+        <select class="chosen-select" id="q4">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h4><strong>----------</strong></h4>
+        <h5>Until I get some excercise, the day doesn't feel complete</h5>
+        <select class="chosen-select" id="q5">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h4><strong>----------</strong></h4>
+        <h5>I prefer someone else take the lead</h5>
+        <select class="chosen-select" id="q6">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+        <h4><strong>----------</strong></h4>
+        <h5>I can always strike up a conversation in any setting</h5>
+        <select class="chosen-select" id="q7">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h4><strong>----------</strong></h4>
+        <h5>I get a charge out of taking risks</h5>
+        <select class="chosen-select" id="q8">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h4><strong>----------</strong></h4>
+        <h5>I prefer a day free of responsibility</h5>
+        <select class="chosen-select" id="q9">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <h4><strong>----------</strong></h4>
+        <h5>I prefer feeling over thinking</h5>
+        <select class="chosen-select" id="q10">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <div>
+            <a href="/survey"><button id="submit" type="submit" class="btn btn-primary" style="color:brown;float:right;margin-bottom:100px;background-color:rgb(122, 140, 196)"><h4>Submit</h4></button></a>
+        </div>
+    </div>
+    <br>
+    
+
+    <hr>
+
+  </div>
+    <div style ="height:35px;position:fixed;bottom:0;;background:slategrey;width:100%">
+        <small style="margin-left:10px"><a href="/api/friends">API Friends List</a> | <a href="https://github.com/...">GitHub Repo</a></small>
+        <small style="float:right;margin-right:10px;font-family:'Nova Mono',monospace">&copy;2018 Kamran Sahrakar</small>
+    </div>
+
+  <!-- Modal -->
+  <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Your Best match is...</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    // Chosen CSS
+    var config = {
+      ".chosen-select": {},
+      ".chosen-select-deselect": {
+        allow_single_deselect: true
+      },
+      ".chosen-select-no-single": {
+        disable_search_threshold: 10
+      },
+      ".chosen-select-no-results": {
+        no_results_text: "Oops, nothing found!"
+      },
+      ".chosen-select-width": {
+        width: "75%"
+      }
+    };
+
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+
+    // Capture the form inputs
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+
+      // Form validation
+      function validateForm() {
+        var isValid = true;
+        $(".form-control").each(function() {
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+
+        $(".chosen-select").each(function() {
+
+          if ($(this).val() === "") {
+            isValid = false;
+          }
+        });
+        return isValid;
+      }
+
+      // If all required fields are filled
+      if (validateForm()) {
+        // Create an object for the user"s data
+        var userProfile = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+          ]
+        };
+
+        // post profile
+        $.post("/api/friends", userProfile, function(data) {
+
+          // Grab best match
+          $("#match-name").text(data.name);
+          $("#match-img").attr("src", data.photo);
+
+          // Show the modal with the best match
+          $("#results-modal").modal("toggle");
+
+        });
+      } else {
+        alert("Please fill out all fields before submitting!");
+      }
+    });
+  </script>
+
+</body>
+
+</html>
