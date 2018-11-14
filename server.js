@@ -1,5 +1,6 @@
 var express = require("express");
 var path = require("path");
+var friends = require("./app/data/friends");
 
 var app = express();
 var PORT = 3113;
@@ -25,23 +26,44 @@ app.get("/survey", function(req, res) {
 
 // ----------------------------------------------------------------
 
-// These routes / data need to be moved to the apiRoutes file and friends file
+// These routes / data need to be moved to the apiRoutes file
 //-----------------------------------------------------------------
-var friends = [
-    {email:"Ah'med@gmail.com",
-    photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-    scores:[5,1,2,4,4,3,2,1,4,5]},
-    {email:"Tal'at@gmail.com",
-    photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa4.jpg",
-    scores:[5,2,3,4,4,5,2,2,4,4]}
-];
 
 app.get("/api/friends", function(req, res) {
     res.json(friends);
-    //res.end("That was an API (GET) call");
 });
 
 app.post("/api/friends", function(req,res){
-    res.end("That was a POST");
+    var curUser=req.body;
+    //console.log(curUser);
+    var mostCompat;
+    var dbDiff=40;
+    var dupl=false;
+    for (i=0;i<friends.length;i++){
+        if(friends[i].email==curUser.email){
+            dupl=true;break;
+        }else{
+            var curFriendDiff=0;
+            for (j=0;j<10;j++){
+                curFriendDiff+=Math.abs(friends[i].scores[j]-curUser.scores[j]);
+            }
+            //console.log(curFriendDiff);
+            if (curFriendDiff<dbDiff){
+                dbDiff=curFriendDiff;
+                mostCompat=friends[i];
+            }
+        }    
+    }
+    if (dupl){
+        mostCompat=curUser;
+        res.json(mostCompat);
+    }else{
+        curUser.inScore=dbDiff;
+        curUser.lastBestFit=dbDiff;
+        mostCompat.lastBestFit=dbDiff;
+        friends.push(curUser);
+        //console.log(friends);
+        res.json(mostCompat);
+    }
 })
 //-----------------------------------------------------------------

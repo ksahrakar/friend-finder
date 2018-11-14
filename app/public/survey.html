@@ -19,20 +19,20 @@
 </head>
 
 <body style="font-family: 'Khand', sans-serif">
-
     <div class="container">
-        <div class="jumbotron">
+        <div class="jumbotron" style="background-color:rgb(122, 140, 196)">
             <h1 style="float:right"><i></i>cmp@bl...</h1>
         </div>
         <hr style="display:block;border-color:brown;border-width:2px"> 
         <h2><strong>Find out who's most like YOU!</strong></h2>
         <br>
         <br>
-        <h3><strong>This is How We Identify You</strong></h3>
+        <h3><strong>This is How We Identify YOU</strong></h3>
         <h4>E-mail address (required)</h4>
         <input type="text" id="name" class="form-control" required>
-        <h4>Profile Pic (required)</h4>
-        <input type="text" id="photo" class="form-control" required>
+        <h4>Profile Pic Link (required)</h4>
+        <h6><a href="https://postimages.org/" target="_blank">You may get a link here...</a></h6>
+        <input type="text" id="picURL" class="form-control" required>
         <br>
         <br>
         <hr style="display:block;border-color:brown;border-width:2px"> 
@@ -44,7 +44,7 @@
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="3">3 (Neutral)</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
         </select>
@@ -55,11 +55,10 @@
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="3">3 (Neutral)</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
         </select>
-
 
         <h4><strong>----------</strong></h4>
         <h5>Being outdoors revitalizes me</h5>
@@ -67,11 +66,10 @@
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="3">3 (Neutral)</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
         </select>
-
 
         <h4><strong>----------</strong></h4>
         <h5>I will suffer to get to a desired goal</h5>
@@ -79,11 +77,10 @@
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="3">3 (Neutral)</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
         </select>
-
 
         <h4><strong>----------</strong></h4>
         <h5>Until I get some excercise, the day doesn't feel complete</h5>
@@ -91,11 +88,10 @@
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="3">3 (Neutral)</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
         </select>
-
 
         <h4><strong>----------</strong></h4>
         <h5>I prefer someone else take the lead</h5>
@@ -103,11 +99,10 @@
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="3">3 (Neutral)</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
         </select>
-
 
         <h4><strong>----------</strong></h4>
         <h5>I can always strike up a conversation in any setting</h5>
@@ -115,7 +110,7 @@
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="3">3 (Neutral)</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
         </select>
@@ -126,7 +121,7 @@
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="3">3 (Neutral)</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
         </select>
@@ -137,7 +132,7 @@
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="3">3 (Neutral)</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
         </select>
@@ -148,74 +143,75 @@
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="3">3 (Neutral)</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
         </select>
+        <br>
         <div>
             <a href="/survey"><button id="submit" type="submit" class="btn btn-primary" style="color:brown;float:right;margin-bottom:100px;background-color:rgb(122, 140, 196)"><h4>Submit</h4></button></a>
         </div>
     </div>
     <br>
-    
-
     <hr>
-
   </div>
-    <div style ="height:35px;position:fixed;bottom:0;;background:slategrey;width:100%">
-        <small style="margin-left:10px"><a href="/api/friends">API Friends List</a> | <a href="https://github.com/...">GitHub Repo</a></small>
-        <small style="float:right;margin-right:10px;font-family:'Nova Mono',monospace">&copy;2018 Kamran Sahrakar</small>
-    </div>
+  <div style ="height:35px;position:fixed;bottom:0;;background:slategrey;width:100%">
+      <small style="margin-left:10px"><a href="/api/friends">API Friends List</a> | <a href="https://github.com/ksahrakar/friend-finder.git">GitHub Repo</a></small>
+      <small style="float:right;margin-right:10px;font-family:'Nova Mono',monospace">&copy;2018 Kamran Sahrakar</small>
+  </div>
 
-  <!-- Modal -->
+<!-- Result Modal -->
   <div id="results-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
-
       <!-- Modal content-->
       <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title"><strong>Your Best match is...</strong></h2>
-        </div>
         <div class="modal-body">
-          <h2 id="match-name"></h2>
-          <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+          <h2 class="modal-title"><strong>Your Best match is...</strong></h2>
+          <h2 id="match-email"></h2>
+          <h4 id="match-score"></h4>
+          <img id="match-img" src="" alt="Match pic" height="200px" width="200px">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
+    </div>
+  </div>
 
+<!-- Duplicate Modal -->
+  <div id="dupl-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+          <h2 class="modal-title"><strong>Duplicate account...</strong></h2>
+          <h2 id="match-email"></h2>
+          <h3>Sorry, you have previously received your match...</h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
   </div>
 
   <script type="text/javascript">
-    // Chosen CSS
+// Chosen
     var config = {
       ".chosen-select": {},
-      ".chosen-select-deselect": {
-        allow_single_deselect: true
-      },
-      ".chosen-select-no-single": {
-        disable_search_threshold: 10
-      },
-      ".chosen-select-no-results": {
-        no_results_text: "Oops, nothing found!"
-      },
-      ".chosen-select-width": {
-        width: "75%"
-      }
+      ".chosen-select-deselect": {allow_single_deselect: true},
+      ".chosen-select-no-single": {disable_search_threshold: 10},
+      ".chosen-select-no-results": {no_results_text: "Oops, nothing found!"},
+      ".chosen-select-width": {width: "75%"}
     };
-
     for (var selector in config) {
       $(selector).chosen(config[selector]);
     }
 
-    // Capture the form inputs
+// Submit data
     $("#submit").on("click", function(event) {
       event.preventDefault();
-
-      // Form validation
+// Validation
       function validateForm() {
         var isValid = true;
         $(".form-control").each(function() {
@@ -223,53 +219,42 @@
             isValid = false;
           }
         });
-
         $(".chosen-select").each(function() {
-
           if ($(this).val() === "") {
             isValid = false;
           }
         });
         return isValid;
       }
-
-      // If all required fields are filled
       if (validateForm()) {
-        // Create an object for the user"s data
         var userProfile = {
-          name: $("#name").val(),
-          photo: $("#photo").val(),
+          email: $("#name").val(),
+          picURL: $("#picURL").val(),
           scores: [
-            $("#q1").val(),
-            $("#q2").val(),
-            $("#q3").val(),
-            $("#q4").val(),
-            $("#q5").val(),
-            $("#q6").val(),
-            $("#q7").val(),
-            $("#q8").val(),
-            $("#q9").val(),
-            $("#q10").val()
-          ]
+            $("#q1").val(),$("#q2").val(),$("#q3").val(),$("#q4").val(),
+            $("#q5").val(),$("#q6").val(),$("#q7").val(),$("#q8").val(),
+            $("#q9").val(),$("#q10").val()
+          ],
+          inScore: 40,
+          lastBestFit: 40
         };
-
-        // post profile
         $.post("/api/friends", userProfile, function(data) {
-
-          // Grab best match
-          $("#match-name").text(data.name);
-          $("#match-img").attr("src", data.photo);
-
-          // Show the modal with the best match
+// Best match
+        if(userProfile.email==data.email){
+          $("#match-email").text(data.email);
+          $("#match-img").attr("src", data.picURL);
+          $("#dupl-modal").modal("toggle");
+        }else{
+          $("#match-email").text(data.email);
+          $("#match-img").attr("src", data.picURL);
+          $("#match-score").text(`Compatibility score: ${40-data.lastBestFit} (0(least) to 40(most))`)
           $("#results-modal").modal("toggle");
-
+        } 
         });
       } else {
-        alert("Please fill out all fields before submitting!");
+        alert("You need to fill out all the fields!");
       }
     });
   </script>
-
 </body>
-
 </html>
