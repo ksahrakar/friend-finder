@@ -35,7 +35,6 @@ app.get("/api/friends", function(req, res) {
 
 app.post("/api/friends", function(req,res){
     var curUser=req.body;
-    //console.log(curUser);
     var mostCompat;
     var dbDiff=40;
     var dupl=false;
@@ -47,7 +46,6 @@ app.post("/api/friends", function(req,res){
             for (j=0;j<10;j++){
                 curFriendDiff+=Math.abs(friends[i].scores[j]-curUser.scores[j]);
             }
-            //console.log(curFriendDiff);
             if (curFriendDiff<dbDiff){
                 dbDiff=curFriendDiff;
                 mostCompat=friends[i];
@@ -62,7 +60,6 @@ app.post("/api/friends", function(req,res){
         curUser.lastBestFit=dbDiff;
         mostCompat.lastBestFit=dbDiff;
         friends.push(curUser);
-        //console.log(friends);
         res.json(mostCompat);
     }
 })
