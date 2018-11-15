@@ -1,16 +1,16 @@
-// GET route with url "/api/friends" shows all friends in JSON format
+var express=require("express");
+var path=require("path");
+var apiRoute= express.Router();
+var friends = require("../data/friends");
 
-app.get("/api/friends", function(req, res) {
+
+// GET route with url "/api/friends" shows all friends in JSON format
+apiRoute.get("/api/friends", function(req, res) {
     res.json(friends);
 });
 
-
-
 // POST route with url "/api/friends" handles incoming survey results and compatibility logic
-
-
-
-app.post("/api/friends", function(req,res){
+apiRoute.post("/api/friends", function(req,res){
     var curUser=req.body;
     var mostCompat;
     var dbDiff=40;
@@ -39,4 +39,7 @@ app.post("/api/friends", function(req,res){
         friends.push(curUser);
         res.json(mostCompat);
     }
+    console.log(friends);
 });
+
+module.exports = apiRoute;

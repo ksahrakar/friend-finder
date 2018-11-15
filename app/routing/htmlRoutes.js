@@ -1,19 +1,13 @@
-// "/survey" GET route to display survey and "/" home.html route
-// var path = require("path");
+var express=require("express");
+var path = require("path");
+var htRoute=express.Router();
 
-// module.exports = function(app){
-//     app.get("/", function(req, res) {
-//         res.end("hi there")
-//         //res.sendFile(path.join(__dirname,"../public/home.html"));
-//     });
-//     app.get("/survey", function(req, res) {
-//         res.sendFile(path.join(__dirname,"../public/survey.html"));
-//     });
-// }
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname,"./app/public/home.html"));
+htRoute.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname,"../public/home.html"));
 });
 
-app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname,"./app/public/survey.html"));
+htRoute.get("/survey", function(req, res) {
+    res.sendFile(path.join(__dirname,"../public/survey.html"));
 });
+
+module.exports = htRoute;
