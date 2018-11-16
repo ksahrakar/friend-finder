@@ -11,7 +11,7 @@ Two pages
 * Link to picture hosting site to allow simplified profile picture link creation
 * Simple interface
 * Links to Github repo and API of all users
-* Compatibility score of best match
+* Compatibility score of best match (max compatibility=40; least=0)
 
 ## Node Dependencies
 * express
