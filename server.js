@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var htRoute = require("./app/routing/htmlRoutes.js");
 
-var PORT = 3113;
+var PORT = process.env.PORT || 3113;
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
